@@ -45,10 +45,7 @@ class student {
         this.age = age;
         this.city = city;
         let val = {"name":name, "age":age, "city":city}
-        localStorage.setItem(this.name, JSON.stringify(val))
-        let y = localStorage.getItem(this.name)
-        console.log(y)
-        
+        localStorage.setItem(this.name, JSON.stringify(val))  
     }
 fulldetails() {
     return `${this.name} is ${this.age} years old and lives in ${this.city} sucessfully registered`
@@ -56,9 +53,7 @@ fulldetails() {
 }
 
 
-
 function retrivedetails(name) {
-        let k = localStorage.getItem(name)
-        let y = JSON.parse(k)
-        return `Name ${y.name} is ${y.age} and lives in ${y.city}`
+        let y = JSON.parse(localStorage.getItem(name))
+        return `Name ${y.name} is ${y.age} old and lives in ${y.city}`
 }
