@@ -7,9 +7,9 @@ function addS() {
     let city1 = document.getElementById("txt3").value
     console.log(name1)
     if (name1 == "") {
-        return alert("no txt")
+        return alert("No txt")
     } else if (lt1.includes(name1)) {
-        return alert("already in list")
+        return alert("Already in list")
     }
     lt1.push(name1)
     const karthicke = new student(name1, age1, city1)
@@ -22,6 +22,12 @@ function addS() {
 
 function Find() {
     let element = document.getElementById("sr").value;
+    if (element == "") {
+        return alert("no txt")
+    } else if (lt2.includes(element)) {
+        return alert("Already in screen")
+    }
+    lt2.push(element)
     let info = retrivedetails(element)
     console.log(info)
     let g = document.createElement("li");
